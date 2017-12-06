@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+    </head>
+    <body>
+        <script>
+
+            const  pressed = [];
+            const key = 'wesbos';
+
+            window.addEventListener('keyup', (e) => {
+                
+                pressed.push(e.key);
+                pressed.splice(-key.length - 1, pressed.length - key.length);
+                
+                if(pressed.join('').includes(key)) {
+                    console.log('Ding Ding!');
+                    cornify_add();
+                }
+            });
+
+        </script>
+    </body>
+</html>
